@@ -1,0 +1,23 @@
+{
+  "name": "esx-repro-rr",
+  "private": true,
+  "scripts": {
+    "build:jsx": "babel app.jsx --out-file app.jsx.js --plugins=@babel/plugin-transform-react-jsx",
+    "build:esx": "babel app.jsx --out-file app.esx.js --plugins=babel-plugin-esx-ssr",
+    "build": "npm run build:jsx && npm run build:esx",
+    "test": "npm run build && node index"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "babel-plugin-esx-ssr": "^1.0.0",
+    "esx": "^2.3.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "to-esx": "^1.0.12"
+  }
+}
